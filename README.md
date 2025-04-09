@@ -1,16 +1,16 @@
 # request-processing-system
 
-## Необходимые программы
-
-- [Git](https://git-scm.com/downloads) - Загрузите и установите Git.
-- [Node.js](https://nodejs.org/en/download/) - загрузите и установите Node.js и менеджер пакетов npm.
-
 ## Используемый стек
 - Node.js
 - TypeScript
 - Express
 - SQLite
 - Prisma
+
+## Необходимые программы
+
+- [Git](https://git-scm.com/downloads) - загрузите и установите Git.
+- [Node.js](https://nodejs.org/en/download/) - загрузите и установите Node.js и менеджер пакетов npm.
 
 ## Установка
 1. Создайте локальную копию репозитория по указанному URL на GitHub.
@@ -19,7 +19,7 @@ git clone https://github.com/p0lluxstar/request-processing-system.git
 ```
 2. Перейдите в каталог с именем backend.
 ```
-cd backend
+cd request-processing-system/backend
 ```
 3. Установите все зависимости проекта, указанные в файле package.json
 ```
@@ -76,6 +76,7 @@ PUTCH /requests/:id/cancel
 }
 ```
 5. Получить список обращений с возможность фильтрации.
+
 По конкретной дате.
 ```
 GET /requests?date=2025-04-09
