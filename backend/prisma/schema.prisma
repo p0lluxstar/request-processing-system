@@ -1,0 +1,28 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Status {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  requests Request[]
+}
+
+model Request {
+  id           Int      @id @default(autoincrement())
+  user         String
+  subject      String
+  message      String
+  statusId     Int
+  statusName   String
+  status       Status   @relation(fields: [statusId], references: [id])
+  solutionText String?
+  cancelText   String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
